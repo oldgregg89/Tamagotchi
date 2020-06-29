@@ -1,9 +1,12 @@
 body {
   background-image: url(https://i.pinimg.com/originals/a3/88/cb/a388cb03db387f20d71e4ffc14df6f5d.jpg);
+  background-repeat: no-repeat;
+  background-size: 1600px 1600px;
 }
 
 .jumbotron {
-  background-color: cornflowerblue;
-  color: darkmagenta;
+  background-image: url(https://66.media.tumblr.com/2e96af587b3f2f96b88c7eb17439c8b3/tumblr_or6nwehp7T1wq3wtao5_400.gifv);
+  color: rgb(115, 95, 231);
+  border-style: solid
 }
 
