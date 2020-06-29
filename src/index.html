@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="main.js"></script>
-  <title>Document</title>
-</head>
-<body>
-  <div class= "container">
-    <div class= "jumbotron">
-      <h2>Template Title</h2>
-      <p class="titleintro">(this is where you put the discription)</p>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <title>Tamagotchi</title>
+  </head>
+  <body>
+    <div class= "container">
+      <div class= "jumbotron">
+        <h2>Tamagotchi</h2>
+        <p class="titleintro"></p>
+      </div>
+      <br>
+      <form id="name">
+        <div class="form-group">
+          <label for="name">What is my name?</label>
+          <input type="text" placeholder="Enter name for your Tamagotchi" required>
+          <button type="submit" name="button" class="btn btn-danger" id="name"></button>
+        </div>
+      </form>
+      <div id="game">
+        <h3>Keep <span id="showName"></span></h3>
+        <div class="row">
+          <div class="col-md-8">  
+            <div class="progress">
+              <div id="foodBar" class="progress-bar bg-success" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Food Level</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <button type="button" id="feedPet" class="btn btn-success btn-lg">Feed Your Pet</button>
+          </div>   
+        </div>  
+          <br>
+        <div class="row">
+          <div class="col-md-8">  
+            <div class="progress">
+              <div id="foodBar" class="progress-bar bg-success" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Food Level</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <button type="button" id="playWithPet" class="btn btn-success btn-lg">Play With Your Pet</button>
+          </div>   
+        </div>  
+          <br>
+        <div class="row">
+          <div class="col-md-8">  
+            <div class="progress">
+              <div id="foodBar" class="progress-bar bg-success" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Food Level</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <button type="button" id="restPet" class="btn btn-success btn-lg">Take a Nap</button>
+          </div>   
+        </div>    
+      </div>  
     </div>
-  </div>
-</body>
+  </body>
 </html>
