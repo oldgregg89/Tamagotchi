@@ -31,12 +31,12 @@ _No known bugs_
 
 ## Support and contact details
 
-_Contact Ian Gregg: <iangregg188@gmail.com>
+* Contact Ian Gregg: <iangregg188@gmail.com>
 or 
-Spencer Moody <spencer.moody@outlook.com>
+* Spencer Moody <spencer.moody@outlook.com>
 or
-Jason Khan <jasonderekkhan@gmail.com>
-_
+* Jason Khan <jasonderekkhan@gmail.com>
+
 
 ## Technologies Used
 

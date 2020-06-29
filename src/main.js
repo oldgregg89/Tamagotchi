@@ -15,36 +15,36 @@ $(document).ready(function() {
     $("#napBar").text(newPet.sleep);
   });
 
-  let newPet = new Pet(Math.floor((Math.random() * 10) + 7), Math.floor((Math.random() * 10) + 7), Math.floor((Math.random() * 10) + 7));
+  let newPet = new Pet(Math.floor((Math.random() * (100 - 50)) + 50), Math.floor((Math.random() * (100 - 50)) + 50), Math.floor((Math.random() * (100 - 50)) + 50));
   newPet.degredation();
 
   $("#feedPet").click(function() {
     newPet.feedPet();
     setInterval(() => {
-      $("#sleeping").hide()
-      $("#dancing").hide()
-      $("#havingfun").hide()
-      $("#eating").show()
+      $("#sleeping").hide();
+      $("#dancing").hide();
+      $("#havingfun").hide();
+      $("#eating").show();
     },2000);
   });
 
   $("#playWithPet").click(function() {
     newPet.playWithPet();
     setInterval(() => {
-      $("#sleeping").hide()
-      $("#dancing").hide()
-      $("#havingfun").show()
-      $("#eating").hide()
+      $("#sleeping").hide();
+      $("#dancing").hide();
+      $("#havingfun").show();
+      $("#eating").hide();
     },2000);
   });
 
   $("#restPet").click(function() {
     newPet.restPet();
     setInterval(() => {
-      $("#sleeping").show()
-      $("#dancing").hide()
-      $("#havingfun").hide()
-      $("#eating").hide()
+      $("#sleeping").show();
+      $("#dancing").hide();
+      $("#havingfun").hide();
+      $("#eating").hide();
     },2000);
   });
 
@@ -54,8 +54,8 @@ $(document).ready(function() {
     $("#napBar").html(newPet.sleep);
     $("#foodBar").css("width", newPet.food + "%");
     $("#playBar").css("width", newPet.happiness + "%");
-    $("#nap").css("width", newPet.sleep + "%");
-  })
+    $("#napBar").css("width", newPet.sleep + "%");
+  });
 
   $("#tryAgain").click(function() {
     location.reload();
