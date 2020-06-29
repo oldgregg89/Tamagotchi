@@ -33,12 +33,14 @@ export class Pet {
     this.happiness -= 1;
     this.petStatus();
     return this.food;
-    }, 200000);
+    }, 5000);
   }
 
   petStatus() {
     if ((this.food <= 0) || (this.sleep <= 0) || (this. happiness <= 0)) {
-      alert("You suck at taking care of your animal");
+      $("#game").hide();
+      $("#gameOverMessage").show();
+      $("#death").show();
     } else if ((this.food <= 3) || (this.sleep <= 3) || (this. happiness <= 3)) {
       alert("Your pet needs some attention!");
     }

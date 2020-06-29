@@ -15,22 +15,49 @@ $(document).ready(function() {
     $("#napBar").text(newPet.sleep);
   });
 
-  let newPet = new Pet(10, 10, 10);
+  let newPet = new Pet(Math.floor((Math.random() * 10) + 7), Math.floor((Math.random() * 10) + 7), Math.floor((Math.random() * 10) + 7));
   newPet.degredation();
 
   $("#feedPet").click(function() {
     newPet.feedPet();
+    setInterval(() => {
+      $("#sleeping").hide()
+      $("#dancing").hide()
+      $("#havingfun").hide()
+      $("#eating").show()
+    },2000);
   });
 
   $("#playWithPet").click(function() {
     newPet.playWithPet();
+    setInterval(() => {
+      $("#sleeping").hide()
+      $("#dancing").hide()
+      $("#havingfun").show()
+      $("#eating").hide()
+    },2000);
   });
 
   $("#restPet").click(function() {
     newPet.restPet();
+    setInterval(() => {
+      $("#sleeping").show()
+      $("#dancing").hide()
+      $("#havingfun").hide()
+      $("#eating").hide()
+    },2000);
   });
 
   let reduce = setInterval(function() {
-    $("#foodBar").css("width", newPet.food + "10%");
+    $("#foodBar").html(newPet.food);
+    $("#playBar").html(newPet.happiness);
+    $("#napBar").html(newPet.sleep);
+    $("#foodBar").css("width", newPet.food + "%");
+    $("#playBar").css("width", newPet.happiness + "%");
+    $("#nap").css("width", newPet.sleep + "%");
   })
+
+  $("#tryAgain").click(function() {
+    location.reload();
+  });
 });
