@@ -12,4 +12,12 @@ describe('Pet', () => {
     expect(newPet.sleep).toEqual(10);
     expect(newPet.happiness).toEqual(10);
   });
+
+  test('Should show the feed property works with raising the lvl of the tamagotchi', () => {
+    expect(newPet.feedPet()).toEqual(false);
+  });
+
+  test('Should verify they aere losing sleep, happiness, food in intervals', () => {
+    
+  });
 });

@@ -5,4 +5,8 @@ export class Pet {
     this.happiness = happiness;
   }
   
+  feedPet() {
+    this.food += 1
+    return this.food;
+  }
 }
