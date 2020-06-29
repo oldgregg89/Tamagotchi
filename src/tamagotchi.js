@@ -10,6 +10,16 @@ export class Pet {
     return this.food;
   }
 
+  playWithPet() {
+    this.happiness += 1
+    return this.happiness;
+  }
+
+  restPet() {
+    this.sleep += 1
+    return this.sleep;
+  }
+
   degredation(){
     setInterval(() => {
     this.food -= 1;
