@@ -23,7 +23,7 @@ _This webpage allows a user to take care of a tamogotchi. Play, feed, and keep y
 | The program will allow user to feed tamogotchi increasing its food level | input: "click feed" | output: tamogotchi food level +1 |
 | The program will allow user to play with tamogotchi increasing its happiness | input: "click play" | output: tamogotchi happiness level +1 |
 | The program will allow user to put tamogotchi to sleep | input: "click sleep" | output: tamogotchi is sleeping |
-| The program will decrease happiness or food level based on how long it has been since last feed
+| The program will decrease happiness or food level based on how long it has been since last feeding or playing | input: nothing | output: after x amount of time: happiness -1 |
 
 ## Known Bugs
 
@@ -31,7 +31,12 @@ _No known bugs_
 
 ## Support and contact details
 
-_Contact Ian Gregg: <iangregg188@gmail.com>_
+_Contact Ian Gregg: <iangregg188@gmail.com>
+or 
+Spencer Moody <spencer.moody@outlook.com>
+or
+Jason Khan <jasonderekkhan@gmail.com>
+_
 
 ## Technologies Used
 
