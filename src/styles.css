@@ -71,5 +71,6 @@ body {
 }
 
 #gameOverMessage {
+  padding-left: 24px;
   display: none;
 }

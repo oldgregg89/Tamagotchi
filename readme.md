@@ -13,6 +13,7 @@ _This webpage allows a user to take care of a tamogotchi. Play, feed, and keep y
 
 * Click on clone and clone this repo to your desktop.
 * From there navigate to desktop to where you cloned this repo.
+* Run npm install
 * double click on index.html file and from there the software will be ready to run.
 
 ## Specs
