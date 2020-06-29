@@ -1,8 +1,8 @@
 export class Pet {
-  constructor(food, sleep, happiness) {
-    this.food = food;
-    this.sleep = sleep;
-    this.happiness = happiness;
+  constructor() {
+    this.food = 10;
+    this.sleep = 10;
+    this.happiness = 10;
   }
   
   feedPet() {
@@ -31,8 +31,9 @@ export class Pet {
     this.food -= 1;
     this.sleep -= 1;
     this.happiness -= 1;
+    this.petStatus();
     return this.food;
-    }, 20000);
+    }, 200000);
   }
 
   petStatus() {
