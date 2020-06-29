@@ -10,17 +10,12 @@ export class Pet {
     return this.food;
   }
 
-  degregation(){
+  degredation(){
     setInterval(() => {
     this.food -= 1;
     this.sleep -= 1;
     this.happiness -= 1;
     return this.food;
-    // if (this.food< 0){
-      
-    // }
   }, 20000);
 }
-  // setInterval(degregation(){
-  // }, 2000);
 }
