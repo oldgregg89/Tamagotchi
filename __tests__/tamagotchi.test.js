@@ -27,10 +27,10 @@ describe('Pet', () => {
   });
 
   test('Should verify that the pet is gaining sleep', () => {
-    expect(newPet.sleep()).toEqual(11);
+    expect(newPet.restPet()).toEqual(11);
   });
 
   test('Should verify that the pet is gaining happiness', () => {
-    expect(newPet.happiness()).toEqual(11);
+    expect(newPet.playWithPet()).toEqual(11);
   });
 });
