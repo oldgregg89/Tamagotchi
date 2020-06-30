@@ -5,6 +5,8 @@ import $ from "jquery";
 import { Pet } from '../src/tamagotchi.js';
 
 $(document).ready(function() {
+  let request = new XMLHttpRequest();
+  const url = `api.giphy.com/v1/gifs/{gif_id}`;
   $("form#name").submit(function(event) {
     event.preventDefault();
     $("#showName").text($("#petName").val());
