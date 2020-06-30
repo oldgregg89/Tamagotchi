@@ -7,30 +7,30 @@ export class Pet {
   
   feedPet() {
     if (this.food < 100) {
-      this.food += 10
+      this.food += Math.floor((Math.random() * (15 - 5)) + 5);
       return this.food;
     }
   }
 
   playWithPet() {
     if (this.happiness < 100) {
-      this.happiness += 10
+      this.happiness += Math.floor((Math.random() * (15 - 5)) + 5);
       return this.happiness;
     }
   }
 
   restPet() {
     if (this.sleep < 100) {
-      this.sleep += 10    
+      this.sleep += Math.floor((Math.random() * (15 - 5)) + 5);
       return this.sleep;
     }
   }
 
   degredation() {
     setInterval(() => {
-    this.food -= 10;
-    this.sleep -= 10;
-    this.happiness -= 10;
+    this.food -= Math.floor((Math.random() * (15 - 5)) + 5);
+    this.sleep -= Math.floor((Math.random() * (15 - 5)) + 5);
+    this.happiness -= Math.floor((Math.random() * (15 - 5)) + 5);
     this.petStatus();
     return this.food;
     }, 5000);

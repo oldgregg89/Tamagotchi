@@ -18,10 +18,12 @@ $(document).ready(function() {
     $("#playBar").text(newPet.happiness);
     $("#napBar").text(newPet.sleep);
 
+// Feed Pet -----
+
     $("#feedPet").click(function() {
       newPet.feedPet();
       let request = new XMLHttpRequest();
-      const url = `http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=feqkVgjJpYtjy`
+      const url = `http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=4LTGEdPueINFzycY1Ixq`
   
       request.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -32,12 +34,31 @@ $(document).ready(function() {
       request.open("GET", url, true);
       request.send(); 
       const getElements = function (response) {
+      $("#eating").show();  
       $('#eating').html(`<img src=${response.data[0].images.downsized_large.url}></img>`);
       }
     });
 
+// Play With Pet -----
+
     $("#playWithPet").click(function() {
       newPet.playWithPet();
+      let request = new XMLHttpRequest();
+      const url = `http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=aAFln8Ljk7S36`
+  
+      request.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          const response = JSON.parse(this.responseText);
+          getElements(response) 
+        }
+      }
+      request.open("GET", url, true);
+      request.send(); 
+      const getElements = function (response) {
+      $("#eating").hide();  
+      $("#havingfun").show();  
+      $('#havingfun').html(`<img src=${response.data[0].images.downsized_large.url}></img>`);
+      }
     });
 
     $("#restPet").click(function() {
@@ -57,5 +78,5 @@ $(document).ready(function() {
       location.reload();
       return false;
     });
-  })  
-});  
+  });
+}); 
