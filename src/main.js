@@ -12,7 +12,6 @@ $(document).ready(function() {
     $("#showName").text($("#petName").val());
     $("#game").show();
     $("form").hide();
-
     let newPet = new Pet(Math.floor((Math.random() * (100 - 50)) + 50), Math.floor((Math.random() * (100 - 50)) + 50), Math.floor((Math.random() * (100 - 50)) + 50));
     newPet.degredation();
     $("#foodBar").text(newPet.food);
@@ -21,32 +20,28 @@ $(document).ready(function() {
 
     $("#feedPet").click(function() {
       newPet.feedPet();
-      setInterval(() => {
-        $("#sleeping").hide();
-        $("#dancing").hide();
-        $("#havingfun").hide();
-        $("#eating").show();
-      },2000);
+      let request = new XMLHttpRequest();
+      const url = `http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=feqkVgjJpYtjy`
+  
+      request.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          const response = JSON.parse(this.responseText);
+          getElements(response) 
+        }
+      }
+      request.open("GET", url, true);
+      request.send(); 
+      const getElements = function (response) {
+      $('#eating').html(`<img src=${response.data[0].images.downsized_large.url}></img>`);
+      }
     });
 
     $("#playWithPet").click(function() {
       newPet.playWithPet();
-      setInterval(() => {
-        $("#sleeping").hide();
-        $("#dancing").hide();
-        $("#havingfun").show();
-        $("#eating").hide();
-      },2000);
     });
 
     $("#restPet").click(function() {
       newPet.restPet();
-      setInterval(() => {
-        $("#sleeping").show();
-        $("#dancing").hide();
-        $("#havingfun").hide();
-        $("#eating").hide();
-      },2000);
     });
 
     setInterval(function() {
@@ -62,5 +57,5 @@ $(document).ready(function() {
       location.reload();
       return false;
     });
-  });
-});
+  })  
+});  

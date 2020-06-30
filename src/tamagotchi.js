@@ -21,7 +21,7 @@ export class Pet {
 
   restPet() {
     if (this.sleep < 100) {
-      this.sleep += 10
+      this.sleep += 10    
       return this.sleep;
     }
   }
@@ -40,7 +40,6 @@ export class Pet {
     if ((this.food <= 0) || (this.sleep <= 0) || (this. happiness <= 0)) {
       $("#game").hide();
       $("#gameOverMessage").show();
-      $("#death").show();
     } else if ((this.food <= 30) || (this.sleep <= 30) || (this. happiness <= 30)) {
       alert("Your pet needs some attention!");
     }
