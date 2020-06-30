@@ -36,39 +36,34 @@ body {
 
 #dancing{
   padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 20%;
 }
 
 #eating {
   padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 20%;
   display: none;
 }
 
 #sleeping {
   padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 20%;
   display: none;
 }
 
 #havingfun {
   padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 20%;
   display: none;
 }
 
 #death {
   padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 20%;
   display: none;
 }
 
-#gameOverMessage {
-  padding-left: 24px;
+#showDeath, #gameOverMessage {
+  padding-left: 20%;
   display: none;
 }

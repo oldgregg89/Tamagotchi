@@ -23,7 +23,7 @@ $(document).ready(function() {
     $("#feedPet").click(function() {
       newPet.feedPet();
       let request = new XMLHttpRequest();
-      const url = `http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=4LTGEdPueINFzycY1Ixq`
+      const url = `http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=dKZRRvQhrT2HS`
   
       request.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -34,6 +34,8 @@ $(document).ready(function() {
       request.open("GET", url, true);
       request.send(); 
       const getElements = function (response) {
+      $("#sleeping").hide();  
+      $("#havingfun").hide()  
       $("#eating").show();  
       $('#eating').html(`<img src=${response.data[0].images.downsized_large.url}></img>`);
       }
@@ -44,7 +46,7 @@ $(document).ready(function() {
     $("#playWithPet").click(function() {
       newPet.playWithPet();
       let request = new XMLHttpRequest();
-      const url = `http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=aAFln8Ljk7S36`
+      const url = `http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=1qnuGtWiouZUI`
   
       request.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -56,13 +58,33 @@ $(document).ready(function() {
       request.send(); 
       const getElements = function (response) {
       $("#eating").hide();  
+      $("#sleeping").hide();
       $("#havingfun").show();  
       $('#havingfun').html(`<img src=${response.data[0].images.downsized_large.url}></img>`);
       }
     });
 
+// Rest -----
+
     $("#restPet").click(function() {
       newPet.restPet();
+      let request = new XMLHttpRequest();
+      const url = `http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=xT8qBvH1pAhtfSx52U`
+  
+      request.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          const response = JSON.parse(this.responseText);
+          getElements(response) 
+        }
+      }
+      request.open("GET", url, true);
+      request.send(); 
+      const getElements = function (response) {
+      $("#havingfun").hide()  
+      $("#eating").hide();
+      $("#sleeping").show();  
+      $('#sleeping').html(`<img src=${response.data[0].images.downsized_large.url}></img>`);
+      }
     });
 
     setInterval(function() {
@@ -73,6 +95,8 @@ $(document).ready(function() {
       $("#playBar").css("width", newPet.happiness + "%");
       $("#napBar").css("width", newPet.sleep + "%");
     });
+
+// death function
 
     $("#tryAgain").click(function() {
       location.reload();
